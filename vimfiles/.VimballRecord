@@ -1,0 +1,3 @@
+checksyntax.vba: call delete('D:\Programs\Vim\vimfiles/doc/checksyntax.txt')|call delete('D:\Programs\Vim\vimfiles/plugin/checksyntax.vim')
+Align.vba: call delete('D:\Programs\Vim\vimfiles/plugin/AlignPlugin.vim')|call delete('D:\Programs\Vim\vimfiles/plugin/AlignMapsPlugin.vim')|call delete('D:\Programs\Vim\vimfiles/plugin/cecutil.vim')|call delete('D:\Programs\Vim\vimfiles/doc/Align.txt')|call delete('D:\Programs\Vim\vimfiles/autoload/Align.vim')|call delete('D:\Programs\Vim\vimfiles/autoload/AlignMaps.vim')
+supertab.vba: call delete('D:\Programs\Vim\vimfiles/doc/supertab.txt')|call delete('D:\Programs\Vim\vimfiles/plugin/supertab.vim')

@@ -1,0 +1,93 @@
+snippet php
+	<?php
+
+	${1}
+snippet phpe
+	<?php echo ${1} ?>${2}
+snippet class
+	/**
+	 * ${2:description}
+	 */
+	class ${1:ClassName}
+	{
+		/**
+		 * ${8:description}
+		 */
+		${3:static }${4:public} function ${5:__construct}($${6:argument})
+		{
+			${7:// code...}
+		}${8}
+	}
+snippet classe
+	/**
+	 * ${3:description}
+	 */
+	class ${1:ClassName} extends ${2:ParentName}
+	{
+		/**
+		 * ${9:description}
+		 */
+		${4:static }${5:public} function ${6:method}(${7:$argument})
+		{
+			${8:// code...}
+		}${10}
+	}
+snippet wh
+	while (${1:/* condition */}) 
+	{
+		${2:// code...}
+	}${3}
+snippet do
+	do 
+	{
+		${2:// code... }
+	} 
+	while (${1:/* condition */});${3}
+snippet if
+	if (${1:/* condition */}) 
+	{
+		${2:// code...}
+	}${3}
+snippet ife
+	if (${1:/* condition */}) 
+	{
+		${2:// code...}
+	} 
+	else 
+	{
+		${3:// code...}
+	}${4}
+snippet t
+	$${1:retVal} = (${2:condition}) ? ${3:a} : ${4:b};${5}
+snippet switch
+	switch ($${1:variable}) 
+	{
+		case '${2:value}':
+		  ${3:// code...}
+		break;
+		  ${5}
+		default:
+			${4:// code...}
+	}${5}
+snippet for
+	for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++}) 
+	{
+		${4: // code...}
+	}${5}
+snippet fore
+	foreach ($${1:variable} as $${2:value}) 
+	{
+		${3:// code...}
+	}${4}
+snippet forek
+	foreach ($${1:variable} as $${2:key} => $${3:value})
+	{
+		${4:// code...}
+	}${5}
+snippet fun
+	${1:static }${2:public }function ${3:FunctionName}(${4:$param})
+	{
+		${5:// code...}
+	}${6}
+snippet array
+	$${1:arrayName} = array('${2}' => ${3});${4}

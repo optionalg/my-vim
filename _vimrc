@@ -40,6 +40,8 @@ set smarttab
 
 " indent
 set autoindent
+set smartindent
+autocmd FileType javascript set nocindent
 
 " colorschema
 colorscheme torte

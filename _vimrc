@@ -71,7 +71,7 @@ set foldmethod=indent
 set foldnestmax=3
 
 " autocomplete
-set completeopt=menu,longest
+" set completeopt=menu,longest
 
 " ruler
 set ruler
@@ -127,4 +127,7 @@ let g:miniBufExplMapCTabSwitchBufs=1
 let g:miniBufExplModSelTarget=1 
 
 " autocomplpop
-let g:acp_behaviorSnipmateLength=1
+" let g:acp_behaviorSnipmateLength=1
+
+" neocomplcache
+let g:neocomplcache_enable_at_startup=1

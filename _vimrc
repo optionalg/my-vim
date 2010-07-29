@@ -71,7 +71,7 @@ set foldmethod=indent
 set foldnestmax=3
 
 " autocomplete
-" set completeopt=menu,longest
+set completeopt=menu,longest
 
 " ruler
 set ruler
@@ -112,8 +112,6 @@ let Tlist_Show_One_File=1
 let Tlist_Use_Right_Window=1
 let Tlist_Enable_Fold_Column=0
 
-" NoeComplCache
-
 " NerdTree
 let NERDChristmasTree=1
 
@@ -126,8 +124,11 @@ let g:miniBufExplMapWindowNavArrows=1
 let g:miniBufExplMapCTabSwitchBufs=1
 let g:miniBufExplModSelTarget=1 
 
-" autocomplpop
-" let g:acp_behaviorSnipmateLength=1
-
 " neocomplcache
 let g:neocomplcache_enable_at_startup=1
+let g:neocomplcache_max_keyword_width=30
+let g:neocomplcache_enable_auto_select=1
+let g:neocomplcache_max_list=50
+let g:neocomplcache_auto_completion_start_length=3
+let g:neocomplcache_manual_completion_start_length=3
+let g:neocomplcache_snippets_dir='D:\Programs\Vim\vimfile\snippets'

@@ -25,6 +25,10 @@ syntax enable
 " number line
 "set number
 
+" fold
+set foldmethod=indent 
+set foldnestmax=3
+
 " show match bracket
 set showmatch
 
@@ -65,10 +69,6 @@ set noswapfile
 
 " format
 set fileformats=unix,dos
-
-" fold
-set foldmethod=indent 
-set foldnestmax=3
 
 " autocomplete
 set completeopt=menu,longest

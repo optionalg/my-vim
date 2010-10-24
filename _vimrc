@@ -97,9 +97,6 @@ set guioptions-=l
 set guioptions-=R
 set guioptions-=L
 
-" define word
-set iskeyword-=_
-
 " buffer switching
 set hidden
 
@@ -131,7 +128,7 @@ let g:miniBufExplModSelTarget=1
 let g:neocomplcache_enable_at_startup=1
 let g:neocomplcache_max_keyword_width=30
 let g:neocomplcache_enable_auto_select=1
-let g:neocomplcache_max_list=16
+let g:neocomplcache_max_list=8
 let g:neocomplcache_auto_completion_start_length=3
 let g:neocomplcache_manual_completion_start_length=3
 let g:neocomplcache_snippets_dir='D:\Programs\Vim\vimfile\snippets'

@@ -48,7 +48,7 @@ set smartindent
 autocmd FileType javascript set nocindent
 
 " colorschema
-colorscheme desert
+colorscheme oceandeep
 
 " history
 set history=100
@@ -78,7 +78,7 @@ set ruler
 
 " cursor cross
 set cursorline
-set cursorcolumn
+set cursorcolumn "this may cause the omni complete flash
 
 " command-line completion
 set wildmenu
@@ -100,9 +100,11 @@ set guioptions-=L
 " buffer switching
 set hidden
 
-" Current Project tags:
-set tags=E:\www\wills\tags
-
+" set omni complete function
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 " Plugins
 
@@ -123,12 +125,3 @@ let g:miniBufExplMapWindowNavVim=1
 let g:miniBufExplMapWindowNavArrows=1
 let g:miniBufExplMapCTabSwitchBufs=1
 let g:miniBufExplModSelTarget=1 
-
-" neocomplcache
-let g:neocomplcache_enable_at_startup=1
-let g:neocomplcache_max_keyword_width=30
-let g:neocomplcache_enable_auto_select=1
-let g:neocomplcache_max_list=8
-let g:neocomplcache_auto_completion_start_length=3
-let g:neocomplcache_manual_completion_start_length=3
-let g:neocomplcache_snippets_dir='D:\Programs\Vim\vimfile\snippets'

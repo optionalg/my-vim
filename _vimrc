@@ -1,18 +1,18 @@
-" refresh at once when this file is saved
-autocmd! bufwritepost _vimrc source % 
 " no vi compatible
 set nocompatible
+" refresh at once when this file is saved
+autocmd! bufwritepost _vimrc source % 
+
+" remove all right click menu
+source $VIMRUNTIME/delmenu.vim
 
 " auto check file type 
-filetype plugin indent on
+filetype indent plugin on
 
 " encodings
 set fileencodings=utf-8,gbk,default,latin1
 let $LANG="zh_CN.UTF-8"
 set encoding=utf-8 "this is the vim's encoding, nothing with files
-
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
 
 if has("gui_running")
   set guifont=Yahei_Mono:h12 "12 is the smallest & best display size
@@ -22,7 +22,7 @@ endif
 " check syntax
 syntax enable
 
-" number line
+" number line " ruler is enough
 "set number
 
 " fold
@@ -42,11 +42,6 @@ set tabstop=2
 set softtabstop=2
 set smarttab
 
-" indent
-set autoindent
-set smartindent
-autocmd FileType javascript set nocindent
-
 " colorschema
 colorscheme oceandeep
 
@@ -65,13 +60,13 @@ set hlsearch
 " backup
 set nobackup
 set nowritebackup
-set noswapfile
+"set noswapfile " swapfile is not that useless
 
 " format
 set fileformats=unix,dos
 
 " autocomplete
-set completeopt=menu,longest
+set completeopt=menu,longest 
 
 " ruler
 set ruler
@@ -90,38 +85,21 @@ set browsedir=buffer
 set nowrap
 
 " gui
-set guioptions-=m
-set guioptions-=T
-set guioptions-=r
-set guioptions-=l
-set guioptions-=R
-set guioptions-=L
+set guioptions=i " why not one line
 
 " buffer switching
 set hidden
 
-" set omni complete function
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-
-" Plugins
-
-" TagList
-let Tlist_Exit_OnlyWindow=1
-let Tlist_Show_One_File=1
-let Tlist_Use_Right_Window=1
-let Tlist_Enable_Fold_Column=0
+" -------- Plugins --------
 
 " NerdTree
 let NERDChristmasTree=1
-
-" snipmate
-"autocmd FileType php set filetype=php.html "makes tlist not work
 
 " minibufexpl
 let g:miniBufExplMapWindowNavVim=1
 let g:miniBufExplMapWindowNavArrows=1
 let g:miniBufExplMapCTabSwitchBufs=1
 let g:miniBufExplModSelTarget=1 
+
+" -------- Indents --------
+:let g:PHP_vintage_case_default_indent=1

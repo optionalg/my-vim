@@ -3,16 +3,12 @@ set nocompatible
 " refresh at once when this file is saved
 autocmd! bufwritepost _vimrc source % 
 
-" remove all right click menu
-source $VIMRUNTIME/delmenu.vim
-
 " auto check file type 
 filetype indent plugin on
 
 " encodings
 set fileencodings=utf-8,gbk,default,latin1
-let $LANG="zh_CN.UTF-8"
-set encoding=utf-8 "this is the vim's encoding, nothing with files
+let $LANG="UTF-8"
 
 if has("gui_running")
   set guifont=Yahei_Mono:h12 "12 is the smallest & best display size

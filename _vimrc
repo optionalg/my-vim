@@ -3,6 +3,12 @@ set nocompatible
 " refresh at once when this file is saved
 autocmd! bufwritepost _vimrc source % 
 
+" the 2 lines is for vimtweak
+" see http://www.vim.org/scripts/script.php?script_id=687
+autocmd GUIEnter * call libcallnr("vimtweak.dll", "SetAlpha", 240)
+autocmd GUIEnter * call libcallnr("vimtweak.dll", "EnableMaximize", 1)
+"autocmd GUIEnter * call libcallnr("vimtweak.dll", "EnableTopMost", 1) 
+
 " auto check file type 
 filetype indent plugin on
 
@@ -12,7 +18,7 @@ let $LANG="UTF-8"
 
 if has("gui_running")
   set guifont=Yahei_Mono:h12 "12 is the smallest & best display size
-  autocmd GUIEnter * simalt ~x "auto maximize the window
+  "autocmd GUIEnter * simalt ~x "auto maximize the window
 endif
 
 " check syntax

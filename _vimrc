@@ -2,17 +2,20 @@
 set nocompatible
 " refresh at once when this file is saved
 autocmd! bufwritepost _vimrc source % 
+autocmd  GUIEnter * call libcallnr("vimtweak.dll", "SetAlpha", 234)
+autocmd  GUIEnter * call libcallnr("vimtweak.dll", "EnableMaximize", 1)
+
+" encodings
+set encoding=utf-8
+set fileencodings=utf-8,gbk,default,latin1
+let $LANG="en_US.UTF-8"
 
 " auto check file type 
 filetype indent plugin on
 
-" encodings
-set fileencodings=utf-8,gbk,default,latin1
-let $LANG="UTF-8"
-
 if has("gui_running")
   set guifont=Yahei_Mono:h12 "12 is the smallest & best display size
-  autocmd GUIEnter * simalt ~x "auto maximize the window
+  "autocmd GUIEnter * simalt ~x "auto maximize the window
 endif
 
 " check syntax
@@ -69,7 +72,7 @@ set ruler
 
 " cursor cross
 set cursorline
-set cursorcolumn "this may cause the omni complete flash
+"set cursorcolumn "this may cause the omni complete flash
 
 " command-line completion
 set wildmenu
@@ -98,4 +101,4 @@ let g:miniBufExplMapCTabSwitchBufs=1
 let g:miniBufExplModSelTarget=1 
 
 " -------- Indents --------
-:let g:PHP_vintage_case_default_indent=1
+:let g:PHP_vintage_case_default_indent=1 "indent case and defualt in php

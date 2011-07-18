@@ -2,21 +2,25 @@
 set nocompatible
 " refresh at once when this file is saved
 autocmd! bufwritepost _vimrc source % 
-autocmd  GUIEnter * call libcallnr("vimtweak.dll", "SetAlpha", 234)
-autocmd  GUIEnter * call libcallnr("vimtweak.dll", "EnableMaximize", 1)
+
+" the 2 lines is for vimtweak
+" see http://www.vim.org/scripts/script.php?script_id=687
+autocmd GUIEnter * call libcallnr("vimtweak.dll", "SetAlpha", 240)
+autocmd GUIEnter * call libcallnr("vimtweak.dll", "EnableMaximize", 1)
+"autocmd GUIEnter * call libcallnr("vimtweak.dll", "EnableTopMost", 1) 
 
 " encodings
 set encoding=utf-8
 set fileencodings=utf-8,gbk,default,latin1
 let $LANG="en_US.UTF-8"
 
-" auto check file type 
-filetype indent plugin on
-
 if has("gui_running")
   set guifont=Yahei_Mono:h12 "12 is the smallest & best display size
   "autocmd GUIEnter * simalt ~x "auto maximize the window
 endif
+
+" auto check file type 
+filetype indent plugin on
 
 " check syntax
 syntax enable
@@ -59,7 +63,6 @@ set hlsearch
 " backup
 set nobackup
 set nowritebackup
-"set noswapfile " swapfile is not that useless
 
 " format
 set fileformats=unix,dos

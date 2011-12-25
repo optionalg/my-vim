@@ -5,9 +5,10 @@ autocmd! bufwritepost _vimrc source %
 
 " the 2 lines is for vimtweak
 " see http://www.vim.org/scripts/script.php?script_id=687
-autocmd GUIEnter * call libcallnr("vimtweak.dll", "SetAlpha", 240)
-autocmd GUIEnter * call libcallnr("vimtweak.dll", "EnableMaximize", 1)
-"autocmd GUIEnter * call libcallnr("vimtweak.dll", "EnableTopMost", 1) 
+"autocmd GUIEnter * call libcallnr("vimtweak.dll", "SetAlpha", 240)
+"autocmd GUIEnter * call libcallnr("vimtweak.dll", "EnableMaximize", 1)
+"autocmd GUIEnter * call libcallnr("vimtweak.dll", "EnableTopMost", 1)
+"vimtweak throws an error in win7 64bit
 
 " encodings
 set encoding=utf-8
@@ -15,7 +16,7 @@ set fileencodings=utf-8,gbk,default,latin1
 let $LANG="en_US.UTF-8"
 
 if has("gui_running")
-  set guifont=Yahei_Mono:h12 "12 is the smallest & best display size
+  set guifont=Courier_New:h12 "12 is the smallest & best display size
   "autocmd GUIEnter * simalt ~x "auto maximize the window
 endif
 
